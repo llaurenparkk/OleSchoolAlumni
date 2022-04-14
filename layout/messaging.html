@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+  <script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+  <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arvo&display=swap" rel="stylesheet">
+<link rel="icon" href="images/logo.webp">
+<script src="https://kit.fontawesome.com/898b8cbdc7.js" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="style.css">
+
+
+<title>Resume</title>
+<style>
+     .container{
+       padding-top: 50px;
+   }
+    .navbar-nav{
+        padding-left: 30px;
+    }
+    .navbar-white{
+        background: white;
+    }
+  
+    .navbar-nav a{
+        font-family: 'Arvo', serif;
+        color: black;
+        font-size: 20px;
+        margin-right: 40px;
+
+    }
+    .nav-link:hover{
+        color: #450084;
+        border-bottom: 2px solid #cbb677;
+        transition: 0.1s; 
+    }
+   .navbar-white .navbar-toggler-icon{
+       background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%280, 0, 0, 0.55%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e")
+   }
+   .navbar-white .navbar-toggler{
+       border: #450084;
+   }
+
+   .bg-purple{
+       background-color: #450084;
+       font-family: 'arvo', serif;
+      
+   }
+   .btn{
+       border: none;
+   }
+
+   .contact{
+       display: inline;
+       
+   }
+   .button{
+       display: block;
+       padding-top: 10px;
+       padding-bottom: 10px;
+       border: #450084 3px solid;
+       background-color: white;
+       border-radius: 50px;
+       width: 50%;
+   }
+   .button:hover{
+       background-color: #450084;
+       border: none;
+   }
+   .button:active{
+    background-color: #450084;
+       border: none;
+   }
+   .row a{
+       text-align: center;
+       color: #000000;
+       font-size: 18px;
+       text-decoration: none;
+   }
+   .col-sm{
+       border: 2px solid black;
+   }
+   body{
+       margin-top:20px;
+background-color:#f2f6fc;
+color:#69707a;
+}
+.img-account-profile {
+    height: 10rem;
+}
+.rounded-circle {
+    border-radius: 50% !important;
+}
+.card {
+    box-shadow: 0 0.15rem 1.75rem 0 rgb(33 40 50 / 15%);
+}
+.card .card-header {
+    font-weight: 500;
+}
+.card-header:first-child {
+    border-radius: 0.35rem 0.35rem 0 0;
+}
+.card-header {
+    padding: 1rem 1.35rem;
+    margin-bottom: 0;
+    background-color: rgba(33, 40, 50, 0.03);
+    border-bottom: 1px solid rgba(33, 40, 50, 0.125);
+}
+.form-control, .dataTable-input {
+    display: block;
+    width: 100%;
+    padding: 0.875rem 1.125rem;
+    font-size: 0.875rem;
+    font-weight: 400;
+    line-height: 1;
+    color: #69707a;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #c5ccd6;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.35rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.nav-borders .nav-link.active {
+    color: #0061f2;
+    border-bottom-color: #0061f2;
+}
+.nav-borders .nav-link {
+    color: #69707a;
+    border-bottom-width: 0.125rem;
+    border-bottom-style: solid;
+    border-bottom-color: transparent;
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+.chat-online {
+    color: #34ce57
+}
+
+.chat-offline {
+    color: #e4606d
+}
+
+.chat-messages {
+    display: flex;
+    flex-direction: column;
+    max-height: 800px;
+    overflow-y: scroll
+}
+
+.chat-message-left,
+.chat-message-right {
+    display: flex;
+    flex-shrink: 0
+}
+
+.chat-message-left {
+    margin-right: auto
+}
+
+.chat-message-right {
+    flex-direction: row-reverse;
+    margin-left: auto
+}
+.py-3 {
+    padding-top: 1rem!important;
+    padding-bottom: 1rem!important;
+}
+.px-4 {
+    padding-right: 1.5rem!important;
+    padding-left: 1.5rem!important;
+}
+.flex-grow-0 {
+    flex-grow: 0!important;
+}
+.border-top {
+    border-top: 1px solid #dee2e6!important;
+}
+
+
+
+ 
+</style>
+
+</head>
+<body>
+<!--NAVIGATION BAR-->
+    <nav class="navbar navbar-expand-lg navbar-white">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="http://127.0.0.1:5500/index.html" target="_blank"><img src="images/logo.webp" width="150px" height="80px"></a>
+          <button 
+          class="navbar-toggler" 
+          type="button" 
+          data-bs-toggle="collapse" 
+          data-bs-target="#navbarNavAltMarkup" 
+          aria-controls="navbarNavAltMarkup" 
+          aria-expanded="false" 
+          aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+            <div class="navbar-nav text-center">
+              <a class="nav-link" href="#">Jobs</a>
+              <a class="nav-link" href="#">Internships</a>
+              <a class="nav-link" href="#">Scholarships</a>
+              <a class="nav-link" href="#">Other Opportunities</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+<!--THIS IS WHERE YOU PUT CIS CONTENT-->
+<div class="container-xl px-4 mt-4">
+    <!-- Account page navigation-->
+    <nav class="nav nav-borders">
+        <a class="nav-link" href="http://127.0.0.1:5500/profile.html">Profile</a>
+        <a class="nav-link" href="http://127.0.0.1:5500/resume.html">Resume</a>
+        <a class="nav-link active" href="http://127.0.0.1:5500/messaging.html#" style="border-color: #450084; color: #450084;">Messages</a>
+    </nav>
+    <hr class="mt-0 mb-4">
+    <main class="content">
+        <div class="container p-0">
+            <h1 class="h3 mb-3">Messages</h1>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-12 col-lg-5 col-xl-3 border-right">
+                        <div class="px-4 d-none d-md-block">
+                            <div class="d-flex align-items-left">
+                                <div class="flex-grow-1">
+                                    <input type="text" class="form-control my-3" placeholder="Search...">
+                                </div>
+                            </div>
+                        </div>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            <div class="badge bg-success float-right">5</div>
+                            <div class="d-flex align-items-start">
+                                <img src="PA/kendra.jpg" class="rounded-circle mr-1" alt="Kendra" width="40" height="40">
+                                <div class="flex-grow-0 ml-2">Kendra Hall
+                                    <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+                                    </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            <div class="badge bg-success float-right">2</div>
+                            <div class="d-flex align-items-start">
+                                <img src="PA/john.jpg" class="rounded-circle mr-1" alt="John" width="40" height="40">
+                                <div class="flex-grow-0 ml-2">John Harper
+                                    <div class="small"><span class="fas fa-circle chat-offline"></span> Online</div>
+                                    </div>
+                            </div>
+                        </a>
+
+                        <a href="#" class="list-group-item list-group-item-action border-0">
+                            <div class="badge bg-success float-right">2</div>
+                            <div class="d-flex align-items-start">
+                                <img src="images/derek.png" class="rounded-circle mr-1" alt="derek" width="40" height="40">
+                                <div class="flex-grow-0 ml-2">Derek Steele
+                                    <div class="small"><span class="fas fa-circle chat-online"></span> Online</div>
+                                    </div>
+                            </div>
+                        </a>
+
+                        <hr class="d-block d-lg-none mt-1 mb-0">
+
+
+
+                    </div>
+                    <div class="col-12 col-lg-7 col-xl-9"> 
+                        <div class="py-2 px-4 border-bottom d-none d-lg-block">
+                            <div class="d-flex align-items-center py-1">
+                                <div class="position-relative">
+                                    <img src="pa/kendra.jpg" class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40">
+                                </div>
+                                <div class="flex-grow-1 pl-3">
+                                    <strong>Kendra Hall</strong>
+                                    <div class="text-muted small"><em>Typing...</em>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="position-relative">
+                            <div class="chat-messages p-4">
+                                <div class="chat-message-right pb-4">
+                                    <div>
+                                        <img src="pa/kendra.jpg" class="rounded-circle mr-1" alt="Chris Wood" width="40" height="40">
+                                        <div class="text-muted small text-nowrap mt-2">9:30am</div>
+                                    </div>
+                                    <div class="flex-shrink-1 bg-light rounded py-2 px-3 mr-3">
+                                        <div class="font-weight-bold mb-1">You</div>
+                                        Hello I had a question about the upcoming event at Festival.
+                                    </div>
+                                    </div>
+                                    <div class="chat-message-left pb-4">
+                                        <div>
+                                            <img src="images/derek.png" class="rounded-circle mr-1" alt="Sharon Lessman" width="40" height="40">
+                                            <div class="text-muted small text-nowrap mt-2">12:45pm
+
+                                            </div>
+                                        </div>
+                                        <div class="flex-shrink-1 bg-light rounded py-2 px-3 ml-3">
+                                            <div class="font-weight-bold mb-1">Derek Steele</div>
+                                        Yes! What would you like to know about it?
+                                    </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                            <div class="flex-grow-0 py-3 px-4 border-top">
+                                <div class="input-group">
+                                    <input type="text" class="form-control" placeholder="Type your message">
+                                    <button class="btn btn-primary">Send</button>
+                                </div>
+                            </div>
+                        </div>
+
+
+                    </div>
+
+
+
+
+
+                </div>
+            </div>
+        </div>
+    </main>
+   
+</div>
+<br> <br>
+
+
+<!--ERASE TO HERE-->
+<!--FOOTER-->
+    <footer class="bg-purple text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-3 mt-4">
+        <!-- Section: Social media -->
+        <section class="mb-0">
+            <!-- Facebook -->
+            <a
+            class="btn btn-primary btn-floating m-1"
+            style="background-color: #3b5998;"
+            href="https://www.facebook.com/jmuoleschoolers" 
+            role="button">
+             <i class="fab fa-facebook-f" ></i>
+            </a>
+        </section>
+        </div>
+        <!--General Contact Information-->
+        <div class="contact">
+            <p style="padding-bottom: 10px; word-spacing: 10px;">oleschoolalumni@gmail.com | 757-651-1751</p>
+        </div>
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            ©2022 Madisoft - Ole School Alumni Scholarship Group.
+        </div>
+    </footer>
+
+      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
